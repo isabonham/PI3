@@ -13,6 +13,11 @@ body {
   align-items: center;
 }
 
+.setur {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,6 +27,30 @@ body {
   font-size: 1.5rem;
 }
 
+.btn-cadastrar {
+    width: 100%;
+    max-width: 340px;
+    padding: 12px 24px;
+    background: transparent;
+    color: #2563eb;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #2563eb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-cadastrar i {
+  font-size: 24px;
+  color: #2563eb;
+}
 .nav-filtros {
   display: flex;
   gap: 1rem;
@@ -61,42 +90,57 @@ body {
   flex-wrap: wrap;
 }
 
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-item img {
+  width: 60px;
+  height: 60px;
+}
+
 .menu button {
   border: none;
   background-color: #eee;
   padding: 10px 16px;
   margin: 4px;
-  border-radius: 20px;
+  border-radius: 40px;
   cursor: pointer;
   font-weight: 500;
 }
 
 .menu button.active {
-  background-color: #1a4cd8;
+  background-color: #263585;
   color: white;
 }
 
 .menu a {
   text-decoration: none;
-  background-color: #eee;
+  background-color: #eeeeee00;
   padding: 10px 16px;
   margin: 4px;
   border-radius: 20px;
+  border: 1px solid #263585;
   cursor: pointer;
   font-weight: 500;
-  color: #000;
+  color: #263585;
   transition: 0.2s;
 }
 
 .menu a:hover {
-  background-color: #ddd;
+  background-color: #dadada;
 }
 
 .menu a.active {
-  background-color: #1a4cd8;
+  background-color: #263585;
   color: white;
 }
 
+.menu-item.active img {
+  filter: brightness(0) invert(1);
+}
 
 .content {
   padding: 20px;
@@ -112,8 +156,8 @@ body {
 }
 
 .hotel-card img {
-  width: 140px;
-  height: 140px;
+  width: 480px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -123,39 +167,60 @@ body {
 }
 
 .hotel-card h2 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+  font-size: 48px;
+  margin-top: 4px;
+  margin-bottom: 1px;
 }
 
 .hotel-card p {
-  font-size: 0.95rem;
+  font-size: 24px;
   color: #333;
   margin-bottom: 12px;
 }
 
 .btn {
   display: inline-block;
-  background-color: #1a4cd8;
+  background-color: #263585;
   color: white;
-  padding: 10px 18px;
-  border-radius: 20px;
+  padding: 16px 16px;
+  border-radius: 30px;
   text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 2, 2, 0.2);
+  inset: 0 2px 4px rgba(255, 255, 255, 0.3);
   font-size: 0.9rem;
 }
 
+.btn span {
+  font-size: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ver-todos {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .ver-todos a {
-  background-color: #1a4cd8;
-  color: white;
-  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a4cd8;
+  padding: 14px 36px;
+  border: 1px solid #1a4cd8;
   border-radius: 25px;
   text-decoration: none;
+  width: 500px;
+  height: 50px;
   font-weight: bold;
+  font-size: 30px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
 
 .top-bar {
   display: flex;
@@ -255,9 +320,9 @@ body {
 }
 
 .container {
-  max-width: 1280px; 
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px; 
+  padding: 0 24px;
   width: 100%;
 }
 
@@ -418,7 +483,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.coluna cardapio{
+.coluna cardapio {
   flex: 1 1 45%;
   min-width: 300px;
 }
@@ -573,4 +638,128 @@ hr {
 .cadastro a {
   color: #0052cc;
   text-decoration: none;
+}
+
+/* Seção de pontos turisticos */
+
+
+.tourism-spot {
+  padding: 16px 24px;
+  margin: 48px;
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.tourism-spot img {
+  width: 500px;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.tourism-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tourism-info h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.tourism-info p {
+  font-size: 24px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.tourism-info a {
+  margin-top: 15px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tourism-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #1e3a8a;
+  color: white;
+  font-family: sans-serif;
+  padding: 40px 20px 10px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 130px;
+}
+
+.badges img {
+  height: 40px;
+  margin-bottom: 16px;
+  gap: 500px;
+}
+
+.footer-top {
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer-column {
+  max-width: 300px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 0.95em;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff33;
+  margin-top: 20px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #ccc;
 }
