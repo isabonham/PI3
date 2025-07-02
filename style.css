@@ -1,129 +1,409 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f8f8f8;
-  }
-  
-  .header {
-    background-color: #1a4cd8;
-    color: white;
-    padding: 16px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .profile-icon {
-    font-size: 1.5rem;
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: space-around;
-    background: white;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    flex-wrap: wrap;
-  }
-  
-  .menu button {
-    border: none;
-    background-color: #eee;
-    padding: 10px 16px;
-    margin: 4px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-  }
-  
-  .menu button.active {
-    background-color: #1a4cd8;
-    color: white;
-  }
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f8f8;
+}
 
-  .menu a {
-    text-decoration: none;
-    background-color: #eee;
-    padding: 10px 16px;
-    margin: 4px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-    color: #000;
-    transition: 0.2s;
-  }
-  
-  .menu a:hover {
-    background-color: #ddd;
-  }
-  
-  .menu a.active {
-    background-color: #1a4cd8;
-    color: white;
-  }
-  
-  
-  .content {
-    padding: 20px;
-  }
-  
-  .hotel-card {
-    background-color: white;
-    display: flex;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  .hotel-card img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-  }
-  
-  .hotel-card .info {
-    padding: 16px;
-    flex: 1;
-  }
-  
-  .hotel-card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-  }
-  
-  .hotel-card p {
-    font-size: 0.95rem;
-    color: #333;
-    margin-bottom: 12px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #1a4cd8;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  
-  .ver-todos {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .ver-todos a {
-    background-color: #1a4cd8;
-    color: white;
-    padding: 10px 24px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
+.header {
+  background-color: #263585;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+.nav-filtros {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid #1f2f85;
+  background-color: transparent;
+  color: #1f2f85;
+  padding: 0.7rem 1rem;
+  border-radius: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtro .icone {
+  font-size: 1.2rem;
+}
+
+.filtro.ativo {
+  background-color: #1f2f85;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.menu button {
+  border: none;
+  background-color: #eee;
+  padding: 10px 16px;
+  margin: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.menu button.active {
+  background-color: #1a4cd8;
+  color: white;
+}
+
+.menu a {
+  text-decoration: none;
+  background-color: #eee;
+  padding: 10px 16px;
+  margin: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #000;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+}
+
+.menu a.active {
+  background-color: #1a4cd8;
+  color: white;
+}
+
+
+.content {
+  padding: 20px;
+}
+
+.hotel-card {
+  background-color: white;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.hotel-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.hotel-card .info {
+  padding: 16px;
+  flex: 1;
+}
+
+.hotel-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.hotel-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #1a4cd8;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.ver-todos {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ver-todos a {
+  background-color: #1a4cd8;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 24px 24px;
+}
+
+.info {
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.avaliacao span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+.avaliacao i {
+  font-size: 1.3rem;
+  color: #333333;
+}
+
+.localizacao {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  gap: 18px;
+}
+
+.localizacao i {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  gap: 16px;
+}
+
+.btn-reservar {
+  background-color: #1d3c94;
+  color: white;
+  width: 300px;
+  padding: 16px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-compartilhar {
+  padding: 16px 24px;
+  border: 1px solid #000;
+  width: 196px;
+  background: white;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1280px; 
+  margin: 0 auto;
+  padding: 0 24px; 
+  width: 100%;
+}
+
+.galeria-container {
+  display: flex;
+  gap: 16px;
+  padding: 16px 24px;
+  flex-wrap: wrap;
+}
+
+.coluna-esquerda {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.imagem-grande img {
+  width: 100%;
+  height: 400px;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.galeria-inferior {
+  display: flex;
+  gap: 16px;
+}
+
+.galeria-inferior img {
+  flex: 1;
+  height: 160px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.coluna-direita {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.coluna-direita img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+/* Seção Sobre */
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 40px 24px;
+  padding-bottom: 40px;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding-top: 24px;
+}
+
+.texto-sobre {
+  flex: 1;
+  min-width: 300px;
+}
+
+.texto-sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.texto-sobre p {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.6;
+}
+
+.mapa-local {
+  max-width: 400px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mapa-local .endereco p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+.btn-mapa {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1a4cd8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-mapa i {
+  margin-left: 4px;
+}
+
+/* Seção de comodidades e Serviços Adicionais */
+.comodidades-servicos {
+  display: flex;
+  justify-content: space-between;
+  gap: 225px;
+  padding: 32px 24px;
+  flex-wrap: wrap;
+}
+
+.coluna {
+  flex: 1;
+  min-width: 300px;
+}
+
+.coluna h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  padding: 16px 24px;
+}
+
+.coluna ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  padding: 16px 24px;
+  margin: 0;
+}
+
+.coluna li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.coluna li i {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+}
