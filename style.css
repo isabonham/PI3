@@ -544,7 +544,7 @@ body {
   align-items: center;
   min-height: 10vh;
   padding: 4rem;
-  font-family: Arial, sans-serif;
+  font-family: 'roboto', sans-serif;
   gap: 2.5rem;
 }
 
@@ -573,6 +573,11 @@ body {
 .login-direita h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  text-align: center;
+  width: 400px; 
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 form {
