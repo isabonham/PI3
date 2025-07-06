@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria de Turismo de Quixadá</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="setur"> SETUR </h1>
+        <img src="imgs/logovazada.png" alt="logo de Quixadá">
+    </header>
+
+    <section class="form-admin">
+    <div class="upload-foto">
+        <label for="fotoMotorista">
+            <i class="bi bi-plus-circle"></i>
+            <p>(Adicione 01 foto do motorista)</p>
+            <input type="file" id="fotoMotorista" accept="image/*">
+        </label>
+    </div>
+
+    <form class="form-campos">
+        <input type="text" placeholder="Inserir Nome *" required>
+        <input type="text" placeholder="Inserir Descrição *" required>
+        <input type="text" placeholder="Inserir Contato *" required>
+
+        <div class="tipo-veiculo">
+            <p>Inserir Tipo de Veículo</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="veiculo" value="carro"> Carro</label>
+                <label><input type="checkbox" name="veiculo" value="moto"> Moto</label>
+            </div>
+        </div>
+
+        <div class="botoes-form">
+            <button type="submit" class="salvar">Salvar</button>
+            <button type="button" class="cancelar">Cancelar</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria de Turismo de Quixadá</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="setur"> SETUR </h1>
+        <img src="imgs/logovazada.png" alt="logo de Quixadá">
+    </header>
+
+    <section class="form-admin">
+        <div class="upload-foto">
+            <label for="foto">
+                <i class="bi bi-plus-circle"></i>
+                <p>(selecione até 08 fotos com menos de 10mb)</p>
+                <input type="file" id="foto" multiple accept="image/*">
+            </label>
+        </div>
+
+        <form class="form-campos">
+            <input type="text" placeholder="Inserir Nome do Hotel *" required>
+            <textarea placeholder="Inserir Descrição *" required></textarea>
+            <input type="text" placeholder="Inserir Localização *" required>
+            <select>
+                <option>Inserir Comodidades</option>
+            </select>
+            <select>
+                <option>Inserir Serviços Adicionais</option>
+            </select>
+
+            <div class="botoes-form">
+                <button class="salvar">Salvar</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
