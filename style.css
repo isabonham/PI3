@@ -31,7 +31,7 @@ body {
 
   .setur {
     width: 100%;
-    text-align:justify;
+    text-align: justify;
   }
 
   .header img {
@@ -368,6 +368,37 @@ body {
   font-size: 1.5rem;
 }
 
+/* Responsivo admin bottons*/
+@media (max-width: 768px) {
+
+  .add-novo button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+
+  .acoes {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .acoes .editar,
+  .acoes .desativar,
+  .acoes .deletar {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .hotel-card+.hotel-card {
+    margin-top: 30px;
+  }
+}
+
 
 .top-bar {
   display: flex;
@@ -625,7 +656,8 @@ body {
 
 @media (max-width: 768px) {
 
-  body, html {
+  body,
+  html {
     width: 100%;
     overflow-x: hidden;
     position: relative;
@@ -662,7 +694,8 @@ body {
     width: auto;
     height: 140px;
     scroll-snap-align: start;
-    margin-right: 16px; /* Espaço entre imagens */
+    margin-right: 16px;
+    /* Espaço entre imagens */
   }
 
   .container {
@@ -1019,6 +1052,63 @@ hr {
 
 .tourism-info a:hover {
   text-decoration: underline;
+}
+
+/* Responsivo pontos turisticos */
+
+@media (max-width: 768px) {
+  .tourism-spot {
+    flex-direction: column;
+    margin: 24px 16px;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .tourism-spot img {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    border-radius: 16px;
+    order: 1;
+  }
+
+  .tourism-spot:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .tourism-spot:nth-child(odd) img {
+    order: 1;
+  }
+
+  .tourism-info {
+    order: 2;
+    padding: 0 8px;
+  }
+
+  .tourism-info h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tourism-info p {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .tourism-info a {
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .tourism-info h2 .icons a {
+    color: #333;
+    margin-left: 0.5rem;
+    font-size: 24px;
+    transition: color 0.2s;
+  }
 }
 
 /* Adicionar hotel */
