@@ -56,6 +56,52 @@
     </div>
   </main>
 
+  <section id="agenda-cultural" class="agenda-container">
+    <h2 class="agenda-title">Agenda cultural de eventos</h2>
+
+    <div class="agenda-content">
+      <!-- Calendário -->
+      <div class="agenda-calendar">
+        <div class="calendar-header">
+          <button class="calendar-prev">◄</button>
+          <span class="calendar-month">Julho 2025</span>
+          <button class="calendar-next">►</button>
+        </div>
+
+        <div class="calendar-weekdays">
+          <span>SEG</span>
+          <span>TER</span>
+          <span>QUA</span>
+          <span>QUI</span>
+          <span>SEX</span>
+          <span>SAB</span>
+          <span>DOM</span>
+        </div>
+
+        <div class="calendar-days">
+          <!-- Aqui o JS vai preencher os dias do mês -->
+        </div>
+      </div>
+
+      <!-- Eventos -->
+      <div class="agenda-events">
+        <div class="events-list">
+          <div class="event-card">
+            <div class="event-header" onclick="toggleEventDetails(this)">
+              <h4>Quarta-Feira - 31 de Dezembro</h4>
+              <span class="arrow">&#9660;</span>
+            </div>
+            <div class="event-details">
+              <p><strong>Local:</strong> Praça Central</p>
+              <p><strong>Horário:</strong> 19:00</p>
+              <p><strong>Descrição:</strong> Show gratuito com bandas locais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="footer-top">
       <div class="header-row">
@@ -92,6 +138,8 @@
       <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

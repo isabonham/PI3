@@ -110,3 +110,14 @@ function toggleEventDetails(headerElement) {
     arrow.innerHTML = "&#9660;"; // seta para baixo
   }
 }
+
+
+document.getElementById("form-adicionar").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Aqui você pode adicionar a lógica de envio do formulário / salvar no banco de dados.
+
+  // Redireciona para a home
+  window.location.href = "home-admin.html";
+});
+
