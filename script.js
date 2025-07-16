@@ -1,3 +1,6 @@
+import { db } from "./firebase-config.js";
+import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
 const calendarDays = document.querySelector(".calendar-days");
 const calendarMonth = document.querySelector(".calendar-month");
 const prevBtn = document.querySelector(".calendar-prev");
@@ -112,12 +115,49 @@ function toggleEventDetails(headerElement) {
 }
 
 
-document.getElementById("form-adicionar").addEventListener("submit", function (event) {
-  event.preventDefault();
+// document.getElementById("form-adicionar").addEventListener("submit", function (event) {
+//   event.preventDefault();
 
-  // Aqui você pode adicionar a lógica de envio do formulário / salvar no banco de dados.
+//   // Aqui você pode adicionar a lógica de envio do formulário / salvar no banco de dados.
 
-  // Redireciona para a home
-  window.location.href = "home-admin.html";
-});
+//   // Redireciona para a home
+//   window.location.href = "home-admin.html";
+// });
+
+async function carregarHoteis() {
+  const servicosRef = collection(db, "servicos");
+  const q = query(servicosRef, where("tipo", "==", "hotel"), where("status", "==", true));
+  const querySnapshot = await getDocs(q);
+
+  const container = document.querySelector(".content");
+
+  querySnapshot.forEach((doc) => {
+    const hotel = doc.data();
+    const hotelCard = document.createElement("section");
+    hotelCard.classList.add("hotel-card");
+
+    hotelCard.innerHTML = `
+      <img src="${hotel.fotos[0]}" alt="${hotel.nome}">
+      <div class="info">
+        <h2>${hotel.nome}</h2>
+        <p>${hotel.descricao}</p>
+        <a href="especificao.html?hotelId=${doc.id}" class="btn"><span>Confira mais Informações</span></a>
+      </div>
+    `;
+
+    container.appendChild(hotelCard);
+  });
+}
+
+async function carregarRestaurantes() {
+}
+
+const page = document.body.dataset.page;
+
+if (page === "home") {
+  carregarHoteis();
+}
+if (page === "restaurantes") {
+  carregarRestaurantes();
+}
 
