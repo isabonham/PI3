@@ -149,15 +149,93 @@ async function carregarHoteis() {
   });
 }
 
-async function carregarRestaurantes() {
+async function carregarRestaurante() {
+  const servicosRef = collection(db, "servicos");
+  const q = query(servicosRef, where("tipo", "==", "restaurante"), where("status", "==", true));
+  const querySnapshot = await getDocs(q);
+
+  const container = document.querySelector(".content");
+
+  querySnapshot.forEach((doc) => {
+    const restaurante = doc.data();
+    const restauranteCard = document.createElement("section");
+    restauranteCard.classList.add("restaurante-card");
+
+    restauranteCard.innerHTML = `
+      <img src="${restaurante.fotos[0]}" alt="${restaurante.nome}">
+      <div class="info">
+        <h2>${restaurante.nome}</h2>
+        <p>${restaurante.descricao}</p>
+        <a href="especificao.html?hotelId=${doc.id}" class="btn"><span>Confira mais Informações</span></a>
+      </div>
+    `;
+
+    container.appendChild(restauranteCard);
+  });
 }
+
+async function carregarTransporte() {
+  const servicosRef = collection(db, "transporte");
+  const q = query(servicosRef, );
+  const querySnapshot = await getDocs(q);
+
+  const container = document.querySelector(".content");
+
+  querySnapshot.forEach((doc) => {
+    const transporte = doc.data();
+    const transporteCard = document.createElement("section");
+    transporteCard.classList.add("transporte-card");
+
+    transporteCard.innerHTML = `
+      <img src="${transporte.foto[0]}" alt="${transporte.nome}">
+      <div class="info">
+        <h2>${transporte.nome}</h2>
+        <p>${transporte.descricao}</p>
+        <a href="especificao.html?hotelId=${doc.id}" class="btn"><span>Confira mais Informações</span></a>
+      </div>
+    `;
+
+    container.appendChild(transporteCard);
+  });
+}
+
+async function carregarGuia() {
+  const servicosRef = collection(db, "servicos");
+  const q = query(servicosRef, where("tipo", "==", "guia"), where("status", "==", true));
+  const querySnapshot = await getDocs(q);
+
+  const container = document.querySelector(".content");
+
+  querySnapshot.forEach((doc) => {
+    const guia = doc.data();
+    const guiaCard = document.createElement("section");
+    guiaCard.classList.add("guia-card");
+
+    guiaCard.innerHTML = `
+      <img src="${guia.fotos[0]}" alt="${guia.nome}">
+      <div class="info">
+        <h2>${guia.nome}</h2>
+        <p>${guia.descricao}</p>
+        <a href="especificao.html?hotelId=${doc.id}" class="btn"><span>Confira mais Informações</span></a>
+      </div>
+    `;
+
+    container.appendChild(guiaCard);
+  });
+}
+
 
 const page = document.body.dataset.page;
 
 if (page === "home") {
   carregarHoteis();
 }
-if (page === "restaurantes") {
-  carregarRestaurantes();
+if (page === "restaurante") {
+  carregarRestaurante();
 }
-
+if (page === "transporte") {
+  carregarTransporte();
+}
+if (page === "guia") {
+  carregarGuia
+}

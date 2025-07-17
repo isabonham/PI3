@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body data-page="guia">
   <header class="header">
     <h1 class="setur"> SETUR </h1>
     <img src="imgs/logovazada.png" alt="logo de Quixadá">
@@ -27,39 +27,6 @@
   </nav>
 
   <main class="content">
-    <section class="hotel-card">
-      <img src="imgs/guia 1.png" alt="Trilha da Galinha Choca">
-      <div class="info">
-        <h2>Sidartha Lobo</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.</p>
-        <a href="https://api.whatsapp.com/send?phone=5588993681162&text=oi%20tia%20leonara" class="btn"><span>Ir para o Contato</span></a>
-      </div>
-    </section>
-
-    <section class="hotel-card">
-      <img src="imgs/guia 2.png" alt="Museu Jacinto de Sousa">
-      <div class="info">
-        <h2>Valdemir Queiroz</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.</p>
-        <a href="https://api.whatsapp.com/send?phone=5588993681162&text=oi%20tia%20leonara" class="btn"><span>Ir para o Contato</span></a>
-      </div>
-    </section>
-
-    <section class="hotel-card">
-      <img src="imgs/guia 3.png" alt="Casa dos Saberes Cego Aderaldo">
-      <div class="info">
-        <h2>Bruno Góis</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.</p>
-        <a href="https://api.whatsapp.com/send?phone=5588993681162&text=oi%20tia%20leonara" class="btn"><span>Ir para o Contato</span></a>
-      </div>
-    </section>
-
     <div class="ver-todos">
       <a href="#">Ver Todos</a>
     </div>
@@ -138,6 +105,52 @@
     </div>
   </section>
 
+    <section id="agenda-cultural" class="agenda-container">
+    <h2 class="agenda-title">Agenda cultural de eventos</h2>
+
+    <div class="agenda-content">
+      <!-- Calendário -->
+      <div class="agenda-calendar">
+        <div class="calendar-header">
+          <button class="calendar-prev">◄</button>
+          <span class="calendar-month">Julho 2025</span>
+          <button class="calendar-next">►</button>
+        </div>
+
+        <div class="calendar-weekdays">
+          <span>SEG</span>
+          <span>TER</span>
+          <span>QUA</span>
+          <span>QUI</span>
+          <span>SEX</span>
+          <span>SAB</span>
+          <span>DOM</span>
+        </div>
+
+        <div class="calendar-days">
+          <!-- Aqui o JS vai preencher os dias do mês -->
+        </div>
+      </div>
+
+      <!-- Eventos -->
+      <div class="agenda-events">
+        <div class="events-list">
+          <div class="event-card">
+            <div class="event-header" onclick="toggleEventDetails(this)">
+              <h4>Quarta-Feira - 31 de Dezembro</h4>
+              <span class="arrow">&#9660;</span>
+            </div>
+            <div class="event-details">
+              <p><strong>Local:</strong> Praça Central</p>
+              <p><strong>Horário:</strong> 19:00</p>
+              <p><strong>Descrição:</strong> Show gratuito com bandas locais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <footer class="footer">
     <div class="footer-top">
       <div class="header-row">
@@ -175,6 +188,7 @@
     </div>
   </footer>
 
+  <script type="module" src="script.js"></script>
 
 </body>
 
