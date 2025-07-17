@@ -3,7 +3,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/11.10.0/firebas
 import { getAuth } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyADL9IXJy8a3KiEQgeNf4nxnUvJpq3IVME",
+  apiKey: "AIzaSyADL9lXJy8a3KiEQgeNf4nxnUvJpq3IVME",
   authDomain: "setur-d4950.firebaseapp.com",
   projectId: "setur-d4950",
   storageBucket: "setur-d4950.firebasestorage.app",
