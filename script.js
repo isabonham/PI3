@@ -159,7 +159,7 @@ async function carregarRestaurante() {
   querySnapshot.forEach((doc) => {
     const restaurante = doc.data();
     const restauranteCard = document.createElement("section");
-    restauranteCard.classList.add("restaurante-card");
+    restauranteCard.classList.add("hotel-card");
 
     restauranteCard.innerHTML = `
       <img src="${restaurante.fotos[0]}" alt="${restaurante.nome}">
@@ -184,7 +184,7 @@ async function carregarTransporte() {
   querySnapshot.forEach((doc) => {
     const transporte = doc.data();
     const transporteCard = document.createElement("section");
-    transporteCard.classList.add("transporte-card");
+    transporteCard.classList.add("hotel-card");
 
     transporteCard.innerHTML = `
       <img src="${transporte.foto[0]}" alt="${transporte.nome}">
@@ -209,7 +209,7 @@ async function carregarGuia() {
   querySnapshot.forEach((doc) => {
     const guia = doc.data();
     const guiaCard = document.createElement("section");
-    guiaCard.classList.add("guia-card");
+    guiaCard.classList.add("hotel-card");
 
     guiaCard.innerHTML = `
       <img src="${guia.fotos[0]}" alt="${guia.nome}">
@@ -237,5 +237,12 @@ if (page === "transporte") {
   carregarTransporte();
 }
 if (page === "guia") {
-  carregarGuia
+  carregarGuia();
+}
+
+if (window.location.pathname.includes("chegar.html") || window.location.pathname.includes("fazer.html")) {
+  const agenda = document.getElementById("agenda-cultural");
+  if (agenda) {
+    agenda.style.display = "none";
+  }
 }
