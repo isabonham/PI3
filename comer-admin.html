@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body data-page="restaurante-admin">
     <header class="header">
         <h1 class="setur"> SETUR </h1>
         <img src="imgs/logovazada.png" alt="logo de Quixadá">
@@ -25,58 +25,21 @@
         <a href="fazer-admin.html" class="menu-btn menu-item">
             <img src="imgs/trilhas icon.svg" alt="O que fazer?">O que fazer?</a>
     </nav>
-
+    
+    <div class="add-novo">
+        <a href="adicionar-restaurante.html" class="btn-add-novo">
+            Adicionar novo <i class="bi bi-plus"></i>
+        </a>
     <main class="content">
-        <div class="add-novo">
-            <a href="adicionar-restaurante.html" class="btn-add-novo">
-                Adicionar novo <i class="bi bi-plus"></i>
-            </a>
-        </div>
+        
+    </div>
 
-        <section class="hotel-card">
-            <img src="imgs/thumb landua.png" alt="Restaurante Landuá">
-            <div class="info">
-                <h2>Restaurante Landuá</h2>
-                <p>Ambiente acolhedor, pratos regionais autênticos e atendimento de excelência. O Restaurante Landuá é
-                    ideal para quem busca uma boa refeição com sabor local.</p>
-                <div class="acoes">
-                    <a href="editar-restaurante.html" class="editar">Editar informações</a>
-                    <button class="desativar">Desativar</button>
-                    <button class="deletar">Deletar</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="hotel-card">
-            <img src="imgs/pier 24.png" alt="Cantinho da Serra">
-            <div class="info">
-                <h2>Açaí com Chocolate</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="acoes">
-                    <a href="editar-restaurante.html" class="editar">Editar informações</a>
-                    <button class="desativar">Desativar</button>
-                    <button class="deletar">Deletar</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="hotel-card">
-            <img src="imgs/the patio.png" alt="Bistrô Quixadá">
-            <div class="info">
-                <h2>Belmond Palacio Nazarenas</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="acoes">
-                    <button class="editar">Editar informações</button>
-                    <button class="desativar">Desativar</button>
-                    <button class="deletar">Deletar</button>
-                </div>
-            </div>
-        </section>
-
-        <div class="ver-todos">
-            <a href="#">Ver Todos</a>
-        </div>
     </main>
+    
+
+    <div class="ver-todos">
+        <a href="#">Ver Todos</a>
+    </div>
 
 
     <footer class="footer">
@@ -116,6 +79,8 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script type="module" src="script-admin.js"></script>
 
 </body>
 

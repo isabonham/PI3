@@ -24,31 +24,33 @@
             </label>
         </div>
 
-        <form class="form-campos">
-            <input type="text" placeholder="Inserir Nome do Restaurante *" required>
-            <textarea placeholder="Inserir Descrição *" required></textarea>
-            <input type="text" placeholder="Inserir Localização *" required>
-            <select>
+        <form id="form-restaurante" class="form-campos">
+            <input type="text" id="nomeRestaurante" placeholder="Inserir Nome do Restaurante *" required>
+            <textarea id="descricaoRestaurante" placeholder="Inserir Descrição *" required></textarea>
+            <input type="text" id="localizacaoRestaurante" placeholder="Inserir Localização *" required>
+            <input type="text" id="contatoRestaurante" placeholder="Inserir Contato *" required>
+            <select id="infoRestaurante">
                 <option>Inserir Informações</option>
             </select>
 
+            <!-- Destaques do cardápio -->
             <label class="label-destaques">Adicione destaques do cardápio</label>
             <div class="destaques-cardapio">
                 <label class="destaque-item">
                     <i class="bi bi-plus"></i>
-                    <input type="file" hidden>
+                    <input type="file" class="destaque-file" hidden>
                 </label>
                 <label class="destaque-item">
                     <i class="bi bi-plus"></i>
-                    <input type="file" hidden>
+                    <input type="file" class="destaque-file" hidden>
                 </label>
                 <label class="destaque-item">
                     <i class="bi bi-plus"></i>
-                    <input type="file" hidden>
+                    <input type="file" class="destaque-file" hidden>
                 </label>
                 <label class="destaque-item">
                     <i class="bi bi-plus"></i>
-                    <input type="file" hidden>
+                    <input type="file" class="destaque-file" hidden>
                 </label>
             </div>
 
@@ -58,3 +60,5 @@
             </div>
         </form>
     </section>
+
+    <script type="module" src="adicionar-restaurante.js"></script>

@@ -16,30 +16,37 @@
     </header>
 
     <section class="form-admin">
-    <div class="upload-foto">
-        <label for="fotoMotorista">
-            <i class="bi bi-plus-circle"></i>
-            <p>(Adicione 01 foto do motorista)</p>
-            <input type="file" id="fotoMotorista" accept="image/*">
-        </label>
-    </div>
+        <div class="upload-foto">
+            <label for="fotoMotorista">
+                <i class="bi bi-plus-circle"></i>
+                <p>(Adicione 01 foto do motorista)</p>
+                <input type="file" id="fotoMotorista" accept="image/*">
+            </label>
+        </div>
 
-    <form class="form-campos">
-        <input type="text" placeholder="Inserir Nome *" required>
-        <input type="text" placeholder="Inserir Descrição *" required>
-        <input type="text" placeholder="Inserir Contato *" required>
+        <form id="form-editar-transporte" class="form-campos">
+            <input type="text" id="nomeMotorista" placeholder="Inserir Nome *" required>
+            <input type="text" id="descricaoServico" placeholder="Inserir Descrição *" required>
+            <input type="text" id="contatoServico" placeholder="Inserir Contato *" required>
 
-        <div class="tipo-veiculo">
-            <p>Inserir Tipo de Veículo</p>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="veiculo" value="carro"> Carro</label>
-                <label><input type="checkbox" name="veiculo" value="moto"> Moto</label>
+            <div class="tipo-veiculo">
+                <p>Inserir Tipo de Veículo</p>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="veiculoCarro" name="veiculo" value="carro"> Carro</label>
+                    <label><input type="checkbox" id="veiculoMoto" name="veiculo" value="moto"> Moto</label>
+                </div>
             </div>
-        </div>
 
-        <div class="botoes-form">
-            <button type="submit" class="salvar">Salvar</button>
-            <button type="button" class="cancelar">Cancelar</button>
-        </div>
-    </form>
-</section>
+            <div class="botoes-form">
+                <button type="submit" class="salvar">Salvar</button>
+                <button type="button" class="cancelar">Cancelar</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+
+<script type="module" src="editar-transporte.js"></script>
+<script type="module" src="script-admin.js"></script>
+
+</html>

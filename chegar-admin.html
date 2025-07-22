@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore Quixadá - Onde Ficar</title>
+    <title>Secretaria de Turismo de Quixadá</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body data-page="transporte-admin">
     <header class="header">
         <h1 class="setur"> SETUR </h1>
         <img src="imgs/logovazada.png" alt="logo de Quixadá">
     </header>
 
     <nav class="menu">
-        <a href="homeadmin.html" class="menu-btn menu-item">
+        <a href="home-admin.html" class="menu-btn menu-item">
             <img src="imgs/hotel icon blue.svg" alt="onde">Onde Ficar?</a>
         <a href="comer-admin.html" class="menu-btn menu-item">
             <img src="imgs/restaurantes iocn.svg" alt="Onde Comer?">Onde Comer?</a>
@@ -26,89 +26,52 @@
             <img src="imgs/trilhas icon.svg" alt="O que fazer?">O que fazer?</a>
     </nav>
 
-    <main class="content">
-        <div class="add-novo">
+    <div class="add-novo">
             <a href="adicionar-transporte.html" class="btn-add-novo">
                 Adicionar novo <i class="bi bi-plus"></i>
             </a>
         </div>
+        
+    <main class="content">
+        
 
-        <section class="hotel-card">
-            <img src="imgs/jose.png" alt="Marcos Paulo">
-            <div class="info">
-                <h2>Marcos Paulo</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.</p>
-                <div class="acoes">
-                    <a href="editar-transporte.html" class="editar">Editar informações</a>
-                    <button class="desativar">Desativar</button>
-                    <button class="deletar">Deletar</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="hotel-card">
-            <img src="imgs/luis.png" alt="Seu Antônio">
-            <div class="info">
-                <h2>Seu Antônio</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="acoes">
-                    <button class="editar">Editar informações</button>
-                    <button class="desativar">Desativar</button>
-                    <button class="deletar">Deletar</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="hotel-card">
-            <img src="imgs/marcos.png" alt="Luís Pereira">
-            <div class="info">
-                <h2>Luís Pereira</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="acoes">
-                    <button class="editar">Editar informações</button>
-                    <button class="desativar">Desativar</button>
-                    <button class="deletar">Deletar</button>
-                </div>
-            </div>
-        </section>
-
-        <div class="ver-todos">
-            <a href="#">Ver Todos</a>
-        </div>
-
-
-        <section class="transport-apps">
-            <h2>Aplicativos de Transporte em Quixadá</h2>
-
-            <div class="apps-container">
-                <div class="app-card">
-                    <img src="imgs/fastrun.webp" alt="Fast Run" class="app-image">
-                    <h3>Fast Run</h3>
-                    <div class="app-links">
-                        <a href="https://play.google.com/store/apps/details?id=br.com.client.fastrun&hl=pt_BR"
-                            target="_blank" class="btn">Google
-                            Play</a>
-                        <a href="https://apps.apple.com/br/app/fast-run/id6444260121" target="_blank" class="btn">App
-                            Store</a>
-                    </div>
-                </div>
-
-            
-                <div class="app-card">
-                    <img src="imgs/dktop.webp" alt="DKTop" class="app-image">
-                    <h3>DKTop</h3>
-                    <div class="app-links">
-                        <a href="https://play.google.com/store/apps/details?id=br.com.client.appdktop&hl=pt_BR"
-                            target="_blank" class="btn">Google Play</a>
-                        <a href="https://apps.apple.com/br/app/dktop/id6741528243" target="_blank" class="btn">App
-                            Store</a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
+
+
+    <div class="ver-todos">
+        <a href="#">Ver Todos</a>
+    </div>
+
+
+    <section class="transport-apps">
+        <h2>Aplicativos de Transporte em Quixadá</h2>
+
+        <div class="apps-container">
+            <div class="app-card">
+                <img src="imgs/fastrun.webp" alt="Fast Run" class="app-image">
+                <h3>Fast Run</h3>
+                <div class="app-links">
+                    <a href="https://play.google.com/store/apps/details?id=br.com.client.fastrun&hl=pt_BR"
+                        target="_blank" class="btn">Google
+                        Play</a>
+                    <a href="https://apps.apple.com/br/app/fast-run/id6444260121" target="_blank" class="btn">App
+                        Store</a>
+                </div>
+            </div>
+
+
+            <div class="app-card">
+                <img src="imgs/dktop.webp" alt="DKTop" class="app-image">
+                <h3>DKTop</h3>
+                <div class="app-links">
+                    <a href="https://play.google.com/store/apps/details?id=br.com.client.appdktop&hl=pt_BR"
+                        target="_blank" class="btn">Google Play</a>
+                    <a href="https://apps.apple.com/br/app/dktop/id6741528243" target="_blank" class="btn">App
+                        Store</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <footer class="footer">
@@ -148,6 +111,8 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script type="module" src="script-admin.js"></script>
 
 </body>
 

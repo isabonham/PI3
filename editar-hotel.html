@@ -24,23 +24,25 @@
             </label>
         </div>
 
-        <form class="form-campos">
-            <input type="text" placeholder="Inserir Nome do Hotel *" required>
-            <textarea placeholder="Inserir Descrição *" required></textarea>
-            <input type="text" placeholder="Inserir Localização *" required>
-            <select>
-                <option>Inserir Comodidades</option>
+        <form id="form-editar-hotel" class="form-campos">
+            <input type="text" id="nomeHotel" placeholder="Inserir Nome do Hotel *" required>
+            <textarea id="descricaoHotel" placeholder="Inserir Descrição *" required></textarea>
+            <input type="text" id="localizacaoHotel" placeholder="Inserir Localização *" required>
+            <select id="comodidadesHotel">
+                <option value="">Inserir Comodidades</option>
             </select>
-            <select>
-                <option>Inserir Serviços Adicionais</option>
+            <select id="servicosAdicionaisHotel">
+                <option value="">Inserir Serviços Adicionais</option>
             </select>
 
             <div class="botoes-form">
-                <button class="salvar">Salvar</button>
-                <button class="cancelar">Cancelar</button>
-            </div>
+                <button type="submit" class="salvar">Salvar</button> <button type="button" class="cancelar">Cancelar</button> </div>
         </form>
     </section>
+
 </body>
+
+<script type="module" src="editar-hotel.js"></script>
+<script type="module" src="script-admin.js"></script>
 
 </html>
