@@ -198,7 +198,7 @@ window.deletarServico = async function (servicoId, colecaoNome) {
 
 window.alternarStatusServico = async function (servicoId, colecaoNome, currentStatus) {
   const novoStatus = currentStatus === 'ativo' ? 'inativo' : 'ativo';
-  const acao = novoStatus === 'ativo' ? 'ativar' : 'desativar';
+  const acao = novoStatus === 'ativo' || "true" ? 'ativar' : 'desativar';
 
   const confirmar = confirm(`Tem certeza que deseja ${acao} este serviço?`);
 
