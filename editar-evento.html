@@ -9,80 +9,48 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body data-page="home-admin">
+<body>
     <header class="header">
         <h1 class="setur"> SETUR </h1>
         <img src="imgs/logovazada.png" alt="logo de Quixadá">
     </header>
 
-    <nav class="menu">
-        <a href="fazer-admin.html" class="menu-btn menu-item">
-            <img src="imgs/trilhas icon.svg" alt="O que fazer?">O que fazer?</a>
-
-        <a href="comer-admin.html" class="menu-btn menu-item">
-            <img src="imgs/restaurantes iocn.svg" alt="Onde Comer?">Onde Comer?</a>
-
-        <a href="home-admin.html" class="menu-btn active menu-item">
-            <img src="imgs/hotel icon blue.svg" alt="onde">Onde Ficar?</a>
-
-        <a href="chegar-admin.html" class="menu-btn menu-item">
-            <img src="imgs/transporte icon.svg" alt="Como Chegar?">Como Chegar?</a>
-    </nav>
-
-    <div class="add-novo">
-        <a href="adicionar-hoteis.html" class="btn-add-novo">
-            Adicionar novo <i class="bi bi-plus"></i>
-        </a>
-    </div>
-
     <main class="content">
+        <div class="form-container">
+            <h2>Editar Evento</h2>
+            <form id="form-editar-evento">
+                <div class="form-group">
+                    <label for="nome-evento">Nome do Evento:</label>
+                    <input type="text" id="nome-evento" required>
+                </div>
 
+                <div class="form-group">
+                    <label for="data-evento">Data:</label>
+                    <input type="date" id="data-evento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="horario-evento">Horário:</label>
+                    <input type="time" id="horario-evento">
+                </div>
+
+                <div class="form-group">
+                    <label for="local-evento">Local:</label>
+                    <input type="text" id="local-evento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao-evento">Descrição:</label>
+                    <textarea id="descricao-evento" rows="5"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-salvar-edicao">Salvar Alterações</button>
+                    <button type="button" id="btn-cancelar-edicao-evento" class="btn-cancelar-evento">Cancelar</button>
+                </div>
+            </form>
+        </div>
     </main>
-
-    <div class="ver-todos">
-        <a href="#" id="btnVerTodos">Ver Todos</a>
-    </div>
-
-    <section id="agenda-cultural" class="agenda-container">
-        <div class="agenda-header-admin">
-            <h2 class="agenda-title">Agenda cultural de eventos</h2>
-            <a href="adicionar-eventos.html" class="btn-adicionar-evento">
-                <i class="bi bi-plus-circle-fill"></i> Adicionar Evento
-            </a>
-        </div>
-
-        <div class="agenda-content">
-            <div class="agenda-calendar">
-                <div class="calendar-header">
-                    <button class="calendar-prev">◄</button>
-                    <span class="calendar-month">Julho 2025</span>
-                    <button class="calendar-next">►</button>
-                </div>
-
-                <div class="calendar-weekdays">
-                    <span>SEG</span>
-                    <span>TER</span>
-                    <span>QUA</span>
-                    <span>QUI</span>
-                    <span>SEX</span>
-                    <span>SAB</span>
-                    <span>DOM</span>
-                </div>
-
-                <div class="calendar-days">
-                </div>
-            </div>
-
-            <div class="agenda-events">
-                <div class="events-list">
-                    <div class="event-card">
-                        <div class="event-header" onclick="toggleEventDetails(this)">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <footer class="footer">
         <div class="footer-top">
@@ -122,7 +90,18 @@
         </div>
     </footer>
 
-    <script type="module" src="script-admin.js"></script>
+    <div id="cancelEditModal" class="modal">
+        <div class="modal-content">
+            <h3>Cancelar Edição de Evento</h3>
+            <p>Você tem certeza que deseja cancelar? Todas as alterações não salvas serão perdidas.</p>
+            <div class="modal-buttons">
+                <button id="modal-confirm-cancel-edit">Sim, Cancelar</button>
+                <button id="modal-close-cancel-edit">Não, Continuar Editando</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="editar-evento.js"></script>
+
 </body>
 
 </html>

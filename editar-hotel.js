@@ -18,6 +18,7 @@ if (!hotelId) {
 const nomeInput = document.getElementById("nomeHotel");
 const descricaoInput = document.getElementById("descricaoHotel");
 const localizacaoInput = document.getElementById("localizacaoHotel");
+const contatoInput = document.getElementById("contatoHotel");
 const comodidadesSelect = document.getElementById("comodidadesHotel"); // Para uso futuro
 const servicosAdicionaisSelect = document.getElementById("servicosAdicionaisHotel"); // Para uso futuro
 
@@ -34,7 +35,8 @@ async function carregarDadosHotel() {
 
             nomeInput.value = data.nome || "";
             descricaoInput.value = data.descricao || "";
-            localizacaoInput.value = data.localizacao || data.local || ""; // Tenta "localizacao" primeiro, depois "local"
+            localizacaoInput.value = data.localizacao || data.local || "";
+            contatoInput.value = data.localizacao || data.contato || "";
 
             // Para os selects, você precisará de mais lógica para preencher as opções
             // e depois definir a opção selecionada, se houver dados no Firestore.
@@ -64,7 +66,8 @@ form.addEventListener("submit", async (e) => {
         await updateDoc(docRef, {
             nome: nomeInput.value.trim(),
             descricao: descricaoInput.value.trim(),
-            localizacao: localizacaoInput.value.trim(), // Certifique-se de que o nome do campo é "localizacao" no Firestore
+            localizacao: localizacaoInput.value.trim(),
+            contato: contatoInput.value.trim(), // Certifique-se de que o nome do campo é "localizacao" no Firestore
             // comodidades: comodidadesSelect.value, // Adicione se for usar
             // servicosAdicionais: servicosAdicionaisSelect.value, // Adicione se for usar
             tipo: "hotel", // Importante para categorizar no Firestore

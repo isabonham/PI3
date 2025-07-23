@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore Quixadá - Onde Ficar</title>
+    <title>Secretaria de Turismo de Quixadá</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -16,30 +16,70 @@
     </header>
 
     <nav class="menu">
-        <a href="home-admin.html" class="menu-btn menu-item">
-            <img src="imgs/hotel icon blue.svg" alt="onde">Onde Ficar?</a>
-        <a href="comer-admin.html" class="menu-btn active menu-item">
-            <img src="imgs/restaurantes iocn.svg" alt="Onde Comer?">Onde Comer?</a>
-        <a href="chegar-admin.html" class="menu-btn menu-item">
-            <img src="imgs/transporte icon.svg" alt="Como Chegar?">Como Chegar?</a>
         <a href="fazer-admin.html" class="menu-btn menu-item">
             <img src="imgs/trilhas icon.svg" alt="O que fazer?">O que fazer?</a>
+
+        <a href="comer-admin.html" class="menu-btn active menu-item">
+            <img src="imgs/restaurantes iocn.svg" alt="Onde Comer?">Onde Comer?</a>
+
+        <a href="home-admin.html" class="menu-btn menu-item">
+            <img src="imgs/hotel icon blue.svg" alt="onde">Onde Ficar?</a>
+
+        <a href="chegar-admin.html" class="menu-btn menu-item">
+            <img src="imgs/transporte icon.svg" alt="Como Chegar?">Como Chegar?</a>
     </nav>
-    
+
     <div class="add-novo">
         <a href="adicionar-restaurante.html" class="btn-add-novo">
             Adicionar novo <i class="bi bi-plus"></i>
         </a>
-    <main class="content">
-        
     </div>
+
+    <main class="content">
+
 
     </main>
-    
 
-    <div class="ver-todos">
-        <a href="#">Ver Todos</a>
-    </div>
+    <section id="agenda-cultural" class="agenda-container">
+        <div class="agenda-header-admin">
+            <h2 class="agenda-title">Agenda cultural de eventos</h2>
+            <a href="adicionar-eventos.html" class="btn-adicionar-evento">
+                <i class="bi bi-plus-circle-fill"></i> Adicionar Evento
+            </a>
+        </div>
+
+        <div class="agenda-content">
+            <div class="agenda-calendar">
+                <div class="calendar-header">
+                    <button class="calendar-prev">◄</button>
+                    <span class="calendar-month">Julho 2025</span>
+                    <button class="calendar-next">►</button>
+                </div>
+
+                <div class="calendar-weekdays">
+                    <span>SEG</span>
+                    <span>TER</span>
+                    <span>QUA</span>
+                    <span>QUI</span>
+                    <span>SEX</span>
+                    <span>SAB</span>
+                    <span>DOM</span>
+                </div>
+
+                <div class="calendar-days">
+                </div>
+            </div>
+
+            <div class="agenda-events">
+                <div class="events-list">
+                    <div class="event-card">
+                        <div class="event-header" onclick="toggleEventDetails(this)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <footer class="footer">
